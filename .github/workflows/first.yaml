@@ -14,6 +14,9 @@ jobs:
                 ls -ltra
                 cat one.txt
 
+            - name: install cowsay library
+              run: sudo apt-get install cowsay -y
+
             - name: Genrate ASCII 
               run: cowsay -f dragon "Run for cover, I am Dragon" >> dragon.txt
             
