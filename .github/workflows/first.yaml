@@ -8,15 +8,21 @@ jobs:
             - name: Checkout 
               uses: actions/checkout@v7
 
-            - name: Welcome
-              run: echo "Welcome All"
+            - name: List and Read file contents
+              run: |
+                echo "Welcome All"
+                ls -ltra
+                cat one.txt
+
+            - name: Genrate ASCII 
+              run: cowsay -f dragon "Run for cover, I am Dragon" >> dragon.txt
             
-            - name: Display contents
-              run: cat one.txt
+            # - name: Display contents
+            #   run: cat one.txt
               
 
-    second_job:
-        runs-on: ubuntu-latest
-        steps:
-            - name: List files
-              run: ls
+    # second_job:
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #         - name: List files
+    #           run: ls
