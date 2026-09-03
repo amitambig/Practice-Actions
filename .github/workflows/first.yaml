@@ -39,8 +39,5 @@ jobs:
               with:
                 name: my-artifact
 
-
-
-
             - name: List files
               run: ls

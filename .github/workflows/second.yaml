@@ -1,0 +1,12 @@
+name: Working with secrets and variables
+on: push
+
+jobs:
+    show_vaues:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Display variable
+              run: echo ${{ vars.MY_VAR }}
+
+            - name: Display secrets
+              run: echo ${{ secrets.MY_USER}}
