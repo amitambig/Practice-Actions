@@ -19,13 +19,27 @@ jobs:
 
             - name: Genrate ASCII 
               run: cowsay -f dragon "Run for cover, I am Dragon" >> dragon.txt
+
+            - name: upload artifact
+              uses: actions/upload-artifact@v7
+              with:
+                name: my-artifact
+                path: dragon.txt
             
             # - name: Display contents
             #   run: cat one.txt
               
 
-    # second_job:
-    #     runs-on: ubuntu-latest
-    #     steps:
-    #         - name: List files
-    #           run: ls
+    second_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Download artifact
+              uses: actions/download-artifact@v7
+              with:
+                name: my-artifact
+
+
+
+
+            - name: List files
+              run: ls
