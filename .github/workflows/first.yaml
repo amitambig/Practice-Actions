@@ -5,8 +5,14 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Checkout 
+            - uses: actions/checkout@v7
+
             - name: Welcome
               run: echo "Welcome All"
+            
+            - name: Display contents
+              run: cat one.txt
               
 
     second_job:
