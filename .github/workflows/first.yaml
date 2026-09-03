@@ -1,0 +1,10 @@
+name: My First file
+on: push
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Welcome
+              run: echo "Welcome All"
+              
