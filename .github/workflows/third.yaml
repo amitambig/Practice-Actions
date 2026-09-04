@@ -14,9 +14,9 @@ jobs:
 
             - name: upload artifact
               uses: actions/upload-artifact@v7
-                with:
-                    name: my-artifact
-                    path: dragon.txt
+              with:
+                name: my-artifact
+                path: dragon.txt
     
     display_file:
         needs: generate_file
@@ -24,8 +24,8 @@ jobs:
         steps:
             - name: download artifact
               uses: actions/download-artifact@v7
-                with:
-                    name: my-artifact
+              with:
+                name: my-artifact
                     
             - name: display file
               run: cat dragon.txt
