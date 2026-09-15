@@ -1,0 +1,15 @@
+name: Matrix example
+on: push
+jobs: 
+    deploy:
+        strategy:
+            matrix: 
+                os: [ubuntu-latest, windows-latest]
+                images: [hello-world, alpine]
+        runs-on: ${{ matrix.os }}
+        steps:
+            - name: Display info
+              run: docker info
+            
+            - name: Runs ${{ matrix.images }} on ${{ matrix.os }}
+              run: docker run ${{ matrix.images }}
