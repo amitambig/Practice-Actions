@@ -1,0 +1,14 @@
+name: usage of contexts
+on: push
+jobs:
+    build_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Describe this run
+            run: |
+            echo "Repository: ${{ github.repository }}"
+            echo "Branch: ${{ github.ref_name }}"
+            echo "Commit: ${{ github.sha }}"
+            echo "Event: ${{ github.event_name }}"
+            echo "Triggered by: ${{ github.actor }}"
+            echo "runner Os: ${{ runner.os}}"
