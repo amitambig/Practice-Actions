@@ -5,7 +5,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: Describe this run
-            run: |
+          run: |
             echo "Repository: ${{ github.repository }}"
             echo "Branch: ${{ github.ref_name }}"
             echo "Commit: ${{ github.sha }}"
